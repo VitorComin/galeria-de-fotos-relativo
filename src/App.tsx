@@ -1,25 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
+import { Layout, Space, Typography } from 'antd';
 import './App.css';
+
+const { Header, Content, Footer } = Layout;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout style={{height: '100vh'}}>
+      <Header className='layout-header'>
+        <Space>
+          <Typography.Title style={{ color: 'white' }}>Galeria de Fotos</Typography.Title>
+        </Space>
+      </Header>
+      <Content className='layout-content'>
+        <Space className='layout-content-container'>
+            Em andamento...
+        </Space>
+      </Content>
+      <Footer style={{ textAlign: 'center' }}>
+        Ant Design ©{new Date().getFullYear()} Created by Ant UED
+      </Footer>
+    </Layout>
   );
 }
 
