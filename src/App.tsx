@@ -1,24 +1,21 @@
-import { Layout, Space, Typography } from 'antd';
+import { Layout, Space } from 'antd';
 import './App.css';
+import LayoutHeader from './components/LayoutHeader';
+import LayoutFooter from './components/LayoutFooter';
+import { Outlet } from 'react-router-dom';
 
-const { Header, Content, Footer } = Layout;
+const { Content } = Layout;
 
 function App() {
   return (
     <Layout style={{height: '100vh'}}>
-      <Header className='layout-header'>
-        <Space>
-          <Typography.Title style={{ color: 'white' }}>Galeria de Fotos</Typography.Title>
-        </Space>
-      </Header>
+      <LayoutHeader />
       <Content className='layout-content'>
         <Space className='layout-content-container'>
-            Em andamento...
+          <Outlet />
         </Space>
       </Content>
-      <Footer style={{ textAlign: 'center' }}>
-        Ant Design ©{new Date().getFullYear()} Created by Ant UED
-      </Footer>
+      <LayoutFooter />
     </Layout>
   );
 }
