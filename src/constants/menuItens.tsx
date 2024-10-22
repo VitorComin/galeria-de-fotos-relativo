@@ -1,10 +1,18 @@
 export const menuItems = [
   {
-    key: '/',
-    label: 'Galeria'
+    key: 8,
+    label: "8 endereços",
   },
   {
-    key: '/about',
-    label: 'Sobre'
-  }
-]
+    key: 16,
+    label: "16 endereços",
+  },
+  {
+    key: 32,
+    label: "32 endereços",
+  },
+  {
+    key: 64,
+    label: "64 endereços",
+  },
+];
