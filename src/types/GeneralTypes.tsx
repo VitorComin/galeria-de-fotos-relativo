@@ -1,6 +1,4 @@
-export interface ILayoutHeader {
-  setAddressesList: React.Dispatch<React.SetStateAction<IAddresses[]>>;
-}
+import { ReactNode } from "react";
 
 export interface IAddresses {
   street: string;
@@ -9,6 +7,11 @@ export interface IAddresses {
   zipCode: string;
 }
 
-export interface IContentPage {
+export interface GeneralContextType {
   addressesList: IAddresses[];
+  setAddressesList: React.Dispatch<React.SetStateAction<IAddresses[]>>;
+}
+
+export interface GeneralProviderProps {
+  children: ReactNode;
 }

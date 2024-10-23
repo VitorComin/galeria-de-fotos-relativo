@@ -1,7 +1,8 @@
 import { Layout, Menu, Space, Typography } from "antd";
 import { menuItems } from "../../constants/menuItens";
-import { ILayoutHeader } from "../../types/GeneralTypes";
 import { Faker, base, pt_BR } from "@faker-js/faker";
+import { useContext } from "react";
+import { GeneralContext } from "../../contexts/GeneralContext";
 
 const BrazilianFaker = new Faker({
   locale: [pt_BR, base],
@@ -9,7 +10,9 @@ const BrazilianFaker = new Faker({
 
 const { Header } = Layout;
 
-const LayoutHeader: React.FC<ILayoutHeader> = ({ setAddressesList }) => {
+const LayoutHeader: React.FC = () => {
+  const { setAddressesList } = useContext(GeneralContext);
+
   function changeAddressesListLength(length: number) {
     const newAddressesList = Array.from({ length: length }, () => ({
       street: BrazilianFaker.location.street(),
