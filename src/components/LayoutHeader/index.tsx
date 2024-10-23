@@ -28,12 +28,7 @@ const LayoutHeader: React.FC<ILayoutHeader> = ({ setAddressesList }) => {
           Lista de Endereços
         </Typography.Title>
       </Space>
-      <Menu
-        theme="dark"
-        mode="horizontal"
-        defaultSelectedKeys={["8"]}
-        className="header-menu"
-      >
+      <Menu theme="dark" mode="horizontal" className="header-menu">
         {menuItems?.map((item) => (
           <Menu.Item
             key={item?.key}

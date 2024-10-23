@@ -8,8 +8,8 @@
 }
 
 .layout-content {
-  padding: 0px 48px; 
-  display: grid; 
+  padding: 0px 48px;
+  display: grid;
   align-items: center;
 }
 
@@ -20,10 +20,24 @@
   border-radius: 6px;
   height: 80%;
   align-items: start;
+  overflow: auto;
+
+  .ant-space-item {
+    width: 100%;
+  }
+  .ant-list {
+    width: 100%;
+  }
+  .ant-col {
+    display: grid;
+  }
+  .ant-list-item {
+    justify-content: unset;
+  }
 }
 
 .header-menu {
-  flex: 1; 
+  flex: 1;
   min-width: 0px;
   margin-left: 25px;
 }
