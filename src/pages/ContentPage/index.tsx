@@ -13,7 +13,7 @@ const ContentPage: React.FC<IContentPage> = ({ addressesList }) => {
           <br />
           <br />
           O objetivo é ver a performance da aplicação usando a componentização
-          profunda com gerenciamento de estado relativo.
+          plana com gerenciamento de estado relativo.
           <br />
           <br />
           Os resultados serão usados para o MVP do meu TCC.
